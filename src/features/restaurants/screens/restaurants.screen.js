@@ -9,25 +9,23 @@ export const RestaurantsScreen = () => {
 
   const onChangeSearch = (query) => setSearchQuery(query);
 
-  const marginHeight = StatusBar.currentHeight && StatusBar.currentHeight;
+  // const marginHeight = StatusBar.currentHeight && StatusBar.currentHeight;
 
   const SafeArea = styled(SafeAreaView)`
     flex: 1;
-    margin-top: ${marginHeight}px;
+    margin-top: 12px;
   `;
 
   const SearchContainer = styled(View)`
-    padding: 16px;
+    padding: ${(props) => props.theme.space[3]};
   `;
 
   const RestaurantListContainer = styled.View`
     flex: 1;
-    padding: 16px;
-    background-color: blue;
+    padding: ${(props) => props.theme.space[3]};
+    background-color: ${(props) => props.theme.colors.ui.error};
   `;
 
-  console.log(" StatusBar", StatusBar.currentHeight);
-  console.log(" height ", marginHeight);
   return (
     <SafeArea>
       <SearchContainer>
