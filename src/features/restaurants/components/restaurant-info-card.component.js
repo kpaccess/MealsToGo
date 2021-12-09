@@ -13,7 +13,8 @@ const RestaurantCardCover = styled(Card.Cover)`
 `;
 
 const Title = styled(Text)`
-  color: black;
+  padding: 16px;
+  color: red;
 `;
 
 export const RestaurantInfoCard = ({ restaurant = {} }) => {
